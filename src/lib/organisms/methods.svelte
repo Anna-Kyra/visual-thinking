@@ -1,9 +1,14 @@
 <script>
+  import Filter from "../molecules/filter.svelte";
+
+  // export let filter;
   export let data;
 </script>
 
+<!-- <Filter data={filter}></Filter> -->
 <section class="grid">
   <h2>Alle methodes ({data.length})</h2>
+  
   {#if data && data.length > 0}
     {#each data as method, index}
       <div class="methods-focus-state">

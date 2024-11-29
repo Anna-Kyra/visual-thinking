@@ -15,3 +15,4 @@
 
 <Filter {data} />
 <Methods data={methods}/>
+<!-- <Methods data={methods} filter={data}/> -->
