@@ -1,6 +1,4 @@
-@view-transition {
-  navigation: auto;
-}
+
 
 :root {
   /* Visual Thinking: Primary Colors:
@@ -223,4 +221,61 @@ svg.icon path.background {
   .hexagons p {
     max-width: 12rem;
   }
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-to-right {
+  from {
+    transform: translateX(0rem);
+  }
+  to {
+    transform: translateX(-4rem);
+  }
+}
+
+@keyframes slide-to-left {
+  from {
+    transform: translateX(-4rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+:root {
+  view-transition-name: root;
+}
+
+::view-transition-old(root) {
+  animation: fade-out 350ms ease-out,
+    slide-to-right 350ms ease-out
+  ;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 350ms ease-out,
+    slide-to-left 350ms ease-out
+  ;
+  mix-blend-mode: normal;
 }
