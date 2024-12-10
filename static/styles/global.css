@@ -227,6 +227,11 @@ svg.icon path.background {
   navigation: auto;
 }
 
+::view-transition-group(root) {
+  animation-duration: 5s;
+}
+
+/* 
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -263,10 +268,6 @@ svg.icon path.background {
   }
 }
 
-:root {
-  view-transition-name: root;
-}
-
 ::view-transition-old(root) {
   animation: fade-out 350ms ease-out,
     slide-to-right 350ms ease-out
@@ -278,4 +279,4 @@ svg.icon path.background {
     slide-to-left 350ms ease-out
   ;
   mix-blend-mode: normal;
-}
+} */
