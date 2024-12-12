@@ -16,5 +16,7 @@
   --page-transition-clr: blue;
   background-color: var(--page-transition-clr);
   view-transition-name: page-transition;
+
+  transition: all 0s;
 }
 </style>
