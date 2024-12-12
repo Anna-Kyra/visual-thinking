@@ -233,8 +233,8 @@ svg.icon path.background {
     transform: translate(0%, 0%);
   }
 
-  50% {
-    transform: translate(-50%, -50%);
+  99% {
+    transform: translate(0%, 0%);
   }
 
   100% {
@@ -243,22 +243,25 @@ svg.icon path.background {
 }
 
 @keyframes fade-out {
-  from {
-    transform: translate(-100%, -100%);
+  0% {
+    transform: translate(-100%, 0%);
   }
 
-  to {
+  99% {
+    transform: translate(-100%, 0%);
+  }
+
+  100% {
     transform: translate(0%, 0%);
   }
 }
 
 ::view-transition-old(root) {
-  animation: fade-in 3s;
+  animation: fade-in 1.5s;
 }
 
 ::view-transition-new(root) {
-  animation: fade-out 3s;
-  /* animation-delay: 5s; */
+  animation: fade-out 1.5s;
 }
 
 /* .methods-focus-state {
@@ -311,13 +314,13 @@ svg.icon path.background {
     }
   }
 
-  ::view-transition-old(page-transition) {
+  /* ::view-transition-old(page-transition) {
     animation: skew-in 3s cubic-bezier(.99,0,0,.99);
   }
 
   ::view-transition-new(page-transition) {
     animation: skew-out 3s cubic-bezier(.99,0,0,.99);
-  }
+  } */
 
   ::view-transition-group(page-transition) {
     animation: skew 3s cubic-bezier(.99,0,0,.99);
