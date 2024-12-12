@@ -2,6 +2,7 @@
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import Introduction from "$lib/molecules/introduction.svelte";
   import Filter from "$lib/molecules/filter.svelte";
+  import PageTransition from "$lib/atoms/pageTransition.svelte";
 
   import Methods from "$lib/organisms/methods.svelte";
 
@@ -16,5 +17,5 @@
 
 <Filter {data} />
 <Methods data={methods}/>
-
+<PageTransition	x="var(--vtYellow)"/>
 <!-- <PageTransition  /> -->

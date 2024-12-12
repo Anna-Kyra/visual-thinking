@@ -14,7 +14,6 @@
   transform: translate(-100%, -100%);
   pointer-events: none;
   --page-transition-clr: blue;
-  border: solid 2px black;
   background-color: var(--page-transition-clr);
   view-transition-name: page-transition;
 }

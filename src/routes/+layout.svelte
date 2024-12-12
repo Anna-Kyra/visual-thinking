@@ -1,7 +1,7 @@
 <script>
     import Header from "$lib/molecules/header.svelte";
     import Footer from "$lib/molecules/footer.svelte";
-	import PageTransition from "$lib/molecules/footer.svelte";
+	import PageTransition from "$lib/atoms/pageTransition.svelte";
     
     import { onNavigate } from '$app/navigation';
 
@@ -18,22 +18,19 @@
 
 
 
-	// export const x = 'red';
+	export let x = 'green';
+	let pageTransition
 
 </script>
 
 <Header />
 
-<main><slot /></main>
+<main><slot />
+	<!-- <PageTransition	x="yellow"/> -->
+</main>
 
 <Footer />
 
-<PageTransition	x="green"/>
 
-<!-- <div class="page-transition" style="--page-transition-clr: {x};"></div> -->
 
-<style>
-    
-
-</style>
-
+<!-- <div bind:this="{pageTransition}" class="page-transition" style="--page-transition-clr: {x};"></div> -->

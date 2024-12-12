@@ -231,8 +231,6 @@ svg.icon path.background {
 ::view-transition-group(root) {
   animation-delay: 3s;
 } */
-
-
   
 @keyframes skew {
   0% {

@@ -2,6 +2,7 @@
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import Introduction from "$lib/molecules/introduction.svelte";
   import MiniCourses from "$lib/organisms/miniCourses.svelte";
+  import PageTransition from "$lib/atoms/pageTransition.svelte";
   
   export let data;
 
@@ -15,3 +16,4 @@
   <MiniCourses data={miniCourses} />
 </div>
 
+<PageTransition	x="var(--vtRed)"/>
