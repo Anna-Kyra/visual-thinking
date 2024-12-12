@@ -13,5 +13,8 @@
 <Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
 <Introduction data={page}/>
 
+
 <Filter {data} />
 <Methods data={methods}/>
+
+<!-- <PageTransition  /> -->

@@ -1,19 +1,25 @@
 <script>
     import Header from "$lib/molecules/header.svelte";
     import Footer from "$lib/molecules/footer.svelte";
+	import PageTransition from "$lib/molecules/footer.svelte";
     
     import { onNavigate } from '$app/navigation';
 
-onNavigate((navigation) => {
-	if (!document.startViewTransition) return;
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
 
-	return new Promise((resolve) => {
-		document.startViewTransition(async () => {
-			resolve();
-			await navigation.complete;
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
 		});
 	});
-});
+
+
+
+	// export const x = 'red';
+
 </script>
 
 <Header />
@@ -22,8 +28,9 @@ onNavigate((navigation) => {
 
 <Footer />
 
-<div class="page-transition"></div>
+<PageTransition	x="green"/>
 
+<!-- <div class="page-transition" style="--page-transition-clr: {x};"></div> -->
 
 <style>
     
