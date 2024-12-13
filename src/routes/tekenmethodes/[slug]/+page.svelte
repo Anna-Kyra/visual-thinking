@@ -1,7 +1,8 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
-
+  import PageTransition from "$lib/atoms/pageTransition.svelte";
+  
   export let data;
 </script>
 
@@ -15,7 +16,7 @@
 
 <section class="section-wrapper">
   {#each data.methods as method}
-    <img src={method?.template?.url} alt="template_image" loading="lazy" />
+    <img src={method?.template?.url} alt="template_image" loading="lazy"/>
 
   <p>
     {@html method?.description.html}
@@ -23,7 +24,7 @@
   {/each}
  
 </section>
-
+<PageTransition	x="var(--vtYellow)"/>
 
 
 <style>

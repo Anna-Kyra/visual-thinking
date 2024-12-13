@@ -1,6 +1,7 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
+  import PageTransition from "$lib/atoms/pageTransition.svelte";
   import { onMount } from "svelte";
 
   export let data;
@@ -82,6 +83,7 @@
   </div>
 </section>
 
+<PageTransition	x="var(--vtYellow)"/>
 <style>
   .js-disable {
     display: none;

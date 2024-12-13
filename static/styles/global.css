@@ -289,7 +289,7 @@ svg.icon path.background {
         transform: translate(0%, 0%) scale3d(0,0,0) rotate(45deg) skew(45deg) ;
     }
     100% {
-        transform: translate(0%, 0%) rotate(45deg) skew(0deg) scale3d(0,0,0);
+        transform: translate(0%, 0%) rotate(135deg) skew(0deg) scale3d(0,0,0);
     }
   }
     

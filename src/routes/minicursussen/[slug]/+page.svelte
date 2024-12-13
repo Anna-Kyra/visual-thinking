@@ -1,6 +1,7 @@
 <script>
   import { slide } from "svelte/transition";
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import PageTransition from "$lib/atoms/pageTransition.svelte";
 
   export let data;
 </script>
@@ -27,6 +28,7 @@
   {/if}
 </div>
 
+<PageTransition	x="var(--vtRed)"/>
 <style>
   div {
     max-width: 43.75em;

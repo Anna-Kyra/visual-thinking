@@ -3,6 +3,7 @@
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
   import TagsPlan from "$lib/molecules/tagsPlan.svelte";
   import Steps from "$lib/molecules/steps.svelte";
+  import PageTransition from "$lib/atoms/pageTransition.svelte";
 
   export let data;
 </script>
@@ -18,6 +19,7 @@
   <Steps {data} />
 </section>
 
+<PageTransition	x="var(--vtYellow)"/>
 <style>
   .grid {
     display: grid;
