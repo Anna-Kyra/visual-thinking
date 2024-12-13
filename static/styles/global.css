@@ -227,48 +227,47 @@ svg.icon path.background {
 @view-transition {
   navigation: auto;
 }
-
-@keyframes fade-in {
-  0% {
-    transform: translate(0%, 0%);
-  }
-
-  99% {
-    transform: translate(0%, 0%);
-  }
-
-  100% {
-    transform: translate(100%, 100%);
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    transform: translate(-100%, 0%);
-  }
-
-  99% {
-    transform: translate(-100%, 0%);
-  }
-
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-
-::view-transition-old(root) {
-  animation: fade-in 1.5s;
-}
-
-::view-transition-new(root) {
-  animation: fade-out 1.5s;
-}
-
-/* .methods-focus-state {
-  view-transition-name: wopp;
-} */
-
 @media (prefers-reduced-motion: no-preference) { 
+  @keyframes fade-in {
+    0% {
+      transform: translate(0%, 0%);
+    }
+
+    99% {
+      transform: translate(0%, 0%);
+    }
+
+    100% {
+      transform: translate(100%, 100%);
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      transform: translate(-100%, 0%);
+    }
+
+    99% {
+      transform: translate(-100%, 0%);
+    }
+
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+
+  ::view-transition-old(root) {
+    animation: fade-in 1.5s;
+  }
+
+  ::view-transition-new(root) {
+    animation: fade-out 1.5s;
+  }
+
+  /* .methods-focus-state {
+    view-transition-name: wopp;
+  } */
+
   @keyframes skew {
     0% {
         transform: translate(-100%, -100%) rotate(45deg) skew(0deg) scale3d(0,0,0);
@@ -292,35 +291,6 @@ svg.icon path.background {
         transform: translate(0%, 0%) rotate(135deg) skew(0deg) scale3d(0,0,0);
     }
   }
-    
-  @keyframes skew-in {
-    from {
-        transform: translate(-100%, -100%);
-    }
-    
-    to {
-        transform: translate(0%, 0%);
-    }
-
-  }
-
-  @keyframes skew-out {
-    from {
-        transform: translate(0%, 0%);
-    }
-
-    to {
-        transform: translate(100%, 100%);
-    }
-  }
-
-  /* ::view-transition-old(page-transition) {
-    animation: skew-in 3s cubic-bezier(.99,0,0,.99);
-  }
-
-  ::view-transition-new(page-transition) {
-    animation: skew-out 3s cubic-bezier(.99,0,0,.99);
-  } */
 
   ::view-transition-group(page-transition) {
     animation: skew 3s cubic-bezier(.99,0,0,.99);
