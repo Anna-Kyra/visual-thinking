@@ -1,3 +1,15 @@
+/* MARK: Fonts */
+@font-face {
+  font-family: 'TheStrikeNest';
+  src: url('/fonts/TheStrikeNest.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'VictorianParlor';
+  src: url('/fonts/Victorian Parlor Vintage Alternate_free.otf');
+}
+
+
 :root {
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
@@ -61,7 +73,10 @@
     */
 
   --vtPrimaryFont: "rigid-square", sans-serif;
+  --VictorianPrimaryFont: "VictorianParlor", cursive;
+  /* --vtPrimaryFont: "rigid-square", sans-serif; */
   --vtSecondaryFont: "yrsa", serif;
+  --VictorianSecondaryFont: "TheStrikeNest", serif;
 
   /* fonts */
   font-size: 20px;
@@ -77,9 +92,10 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: var(--vtSecondaryFont);
-
   cursor: url('/images/victorian_cursor.png'), auto !important;
 }
+
+/* MARK: Victorian cursor */
 
 a:hover, 
 button:hover, 
@@ -152,11 +168,12 @@ blockquote:after {
 h1,
 h2,
 h3 {
-  font-family: var(--vtPrimaryFont);
+  font-family: var(--VictorianPrimaryFont);
 }
 
 p {
-  font-family: var(--vtSecondaryFont);
+  font-family: var(--VictorianSecondaryFont);
+  font-weight: bold;
   line-height: 1.5;
 }
 

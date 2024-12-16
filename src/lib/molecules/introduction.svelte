@@ -5,7 +5,7 @@
 </script>
 
 <header>
-  <h1>{title}</h1>
+  <h1>A Visual Thinking carol</h1>
     
   {@html content.html}
 </header>
@@ -24,7 +24,7 @@
           width: 75%;
       }
       h1 {
-          font-size: 3.157rem;
+          font-size: 4rem;
           text-align: center;
       }
   }

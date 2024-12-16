@@ -55,7 +55,7 @@
   /* Header styling */
   h2 {
     font-size: 3.157rem;
-    font-family: var(--vtPrimaryFont);
+    /* font-family: var(--vtPrimaryFont); */
     color: var(--vtDarkBlue);
     text-align: center;
   }
