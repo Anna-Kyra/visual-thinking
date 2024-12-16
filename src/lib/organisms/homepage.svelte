@@ -39,7 +39,7 @@
 
 <style>
   ul li a {
-    /* --bg: #e0dedc; */
+    --bg: var(--vtGrey-50);
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: var(--bg);
     /*   aspect-ratio: 1 / 1; */

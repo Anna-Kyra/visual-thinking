@@ -15,9 +15,12 @@
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
     */
   --vtDarkBlue: #090940;
-  --vtLightBlue: #67c5d1;
-  --vtYellow: #feb51e;
-  --vtRed: #f96c4f;
+  /* --vtLightBlue: #67c5d1; */
+  --vtLightBlue: #418087;
+  /* --vtYellow: #feb51e; */
+  --vtYellow: #c1881f;
+  /* --vtRed: #f96c4f; */
+  --vtRed: #a5563d;
   --vtWhite: #ffffff;
   --vtBlack: #000000;
 
@@ -48,9 +51,11 @@
     Zie kleuren styleguide of eventueel Figma designs voor gebruik!
      Word vaak gebruikt voor backgrounds en borders. 
     */
-  --vtGrey: #cecece;
+  /* --vtGrey: #cecece; */
+  --vtGrey: #c2bda0;
   --vtGrey-80: #c0beb9;
-  --vtGrey-50: #e0dedc;
+  /* --vtGrey-50: #e0dedc; */
+  --vtGrey-50: #c2bda0;
   --vtGrey-10: #f9f8f8;
   --vtGrey-5: #f9f9f9;
 
@@ -64,7 +69,8 @@
   --vtSec-Green: #169861;
   --vtSec-Green-30: #63c09f;
   --vtSec-LightBlue: #4fbbc2;
-  --vtSec-DarkBlue: #31439c;
+  /* --vtSec-DarkBlue: #31439c; */
+  --vtSec-DarkBlue: #194176;
   /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
   --vtSec-Brown: #8b3a00;
   --vtSec-Orange: #fe6f07;
@@ -93,6 +99,8 @@ body {
   overflow-x: hidden;
   font-family: var(--vtSecondaryFont);
   cursor: url('/images/victorian_cursor.png'), auto !important;
+
+  background-color: #f7e9c6;
 }
 
 /* MARK: Victorian cursor */
