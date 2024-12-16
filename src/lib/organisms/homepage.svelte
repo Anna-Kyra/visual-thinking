@@ -8,30 +8,30 @@
       <a href="/"><span><img src="/images/pencil.svg" alt="pencil_image" /></span></a>
     </li>
     <li>
-      <a href="/over" style="--bg:#3F439D" class="highlight"
+      <a href="/over" style="--bg:var(--vtSec-DarkBlue)" class="highlight"
         ><span>Over Visual Thinking</span></a
       >
     </li>
     <li>
-      <a href="/tekenmethodes" style="--bg:#feb51e" class="highlight"
+      <a href="/tekenmethodes" style="--bg:var(--vtYellow)" class="highlight"
         ><span>Ontdek de Visual Thinking methodes</span></a
       >
     </li>
     <li>
-      <a href="/artikelen" style="--bg:#e0dedc"><span>Artikelen</span></a>
+      <a href="/artikelen" style="--bg:var(--vtGrey-50)"><span>Artikelen</span></a>
     </li>
     <li>
-      <a href="/kennisclips" style="--bg:#67c5d1" class="highlight"
+      <a href="/kennisclips" style="--bg:var(--vtLightBlue)" class="highlight"
         ><span>Kennisclips</span></a
       >
     </li>
     <li>
-      <a href="/minicursussen" style="--bg:#f96c4f" class="highlight"
+      <a href="/minicursussen" style="--bg:var(--vtRed)" class="highlight"
         ><span>Minicursussen</span></a
       >
     </li>
     <li>
-      <a href="/tekenruimte" style="--bg:#e0dedc"><span>Tekenruimte</span></a>
+      <a href="/tekenruimte" style="--bg:var(--vtGrey-50)"><span>Tekenruimte</span></a>
     </li>
   </ul>
 </section>
@@ -125,7 +125,7 @@
   }
 
   ul li a:nth-of-type(3) {
-    background-color: #3f439d;
+    background-color: var(--vtSec-DarkBlue);
   }
 
   ul li:nth-of-type(4) {
