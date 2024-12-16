@@ -52,10 +52,10 @@
      Word vaak gebruikt voor backgrounds en borders. 
     */
   /* --vtGrey: #cecece; */
-  --vtGrey: #c2bda0;
+  --vtGrey: #ccbfb2;
   --vtGrey-80: #c0beb9;
   /* --vtGrey-50: #e0dedc; */
-  --vtGrey-50: #c2bda0;
+  --vtGrey-50: #ccbfb2;
   --vtGrey-10: #f9f8f8;
   --vtGrey-5: #f9f9f9;
 
@@ -100,7 +100,7 @@ body {
   font-family: var(--vtSecondaryFont);
   cursor: url('/images/victorian_cursor.png'), auto !important;
 
-  background-color: #f7e9c6;
+  background-color: #ffefdf;
 }
 
 /* MARK: Victorian cursor */
