@@ -77,7 +77,29 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: var(--vtSecondaryFont);
+
+  cursor: url('/images/victorian_cursor.png'), auto !important;
 }
+
+a:hover, 
+button:hover, 
+input:hover, 
+label:hover,
+video:hover,
+iframe:hover
+{
+  cursor: url('/images/victorian_cursor_hover.png'), auto !important; 
+}
+
+a:active, 
+button:active, 
+input:active, 
+label:active,
+video:active
+{
+  cursor: url('/images/victorian_cursor_active.png'), auto !important; 
+}
+
 
 blockquote {
   font-weight: 800;

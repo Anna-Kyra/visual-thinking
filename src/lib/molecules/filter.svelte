@@ -95,6 +95,7 @@
 
   section button:hover {
     background-color: var(--vtYellow-80);
+    cursor: url('/images/victorian_hand03.png'), auto; 
   }
 
   .loading-spinner {

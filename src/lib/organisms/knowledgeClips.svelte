@@ -88,12 +88,12 @@
   }
 
   .right-arrow {
-    cursor: pointer;
+    /* cursor: pointer; */
     border: none;
   }
 
   .left-arrow {
-    cursor: pointer;
+    /* cursor: pointer; */
     transform: rotate(180deg);
   }
 
