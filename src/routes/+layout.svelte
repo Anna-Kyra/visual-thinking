@@ -8,12 +8,14 @@
     let timeoutId
     let isInactive = false
     let opacityFreeze = 0
+    let sound = new Audio("/video/ice-crack.mp3");
 
     function toggleOverlay(inactive) {
         isInactive = inactive;
         if (inactive) {
             console.log('freeze')
             opacityFreeze = 100
+            sound.play();
         } else {
             console.log('unfreeze')
             opacityFreeze = 0
