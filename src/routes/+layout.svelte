@@ -27,7 +27,7 @@
         }
 
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => toggleOverlay(true), 4000)
+        timeoutId = setTimeout(() => toggleOverlay(true), 10000)
     }
 
     onMount(() => {

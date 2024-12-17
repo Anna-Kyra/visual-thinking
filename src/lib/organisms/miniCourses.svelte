@@ -45,26 +45,13 @@
   ul li {
     width: var(--size);
     height: calc(var(--size) * 1.1);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  ul li::after {
-    content: '';
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    background-image: url('/images/christmas-polygon.png');
-    background-size: cover;
-    background-position: center;
 
-  }
 
   ul li a {
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--vtRed);
+    /* clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); */
+    /* background: var(--vtRed); */
     display: grid;
     text-decoration: none;
     color: #fff;
@@ -76,17 +63,43 @@
     width: 100%;
     font-family: var(--vtPrimaryFont);
     transition:.25s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-    ul li:nth-of-type(2) a {
+  ul li a span {
+    /* place-self: center; */
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: var(--vtRed);
+    width: 100%;
+    height: 140%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li a::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-image: url('/images/christmas-polygon.png');
+    background-size: 100% 100%;
+    background-position: center;
+    pointer-events: none;
+  }
+
+    ul li:nth-of-type(2) a span{
       background: var(--vtLightBlue);
     }
 
-    ul li:nth-of-type(3) a {
+    ul li:nth-of-type(3) a span{
       background: var(--vtYellow);
     }
 
-    ul li:nth-of-type(4) a {
+    ul li:nth-of-type(4) a span{
       background: var(--vtDarkBlue);
     }
 

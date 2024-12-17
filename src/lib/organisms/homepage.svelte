@@ -40,8 +40,8 @@
 <style>
   ul li a {
     --bg: var(--vtGrey-50);
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--bg);
+    /* clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); */
+    /* background: var(--bg); */
     /*   aspect-ratio: 1 / 1; */
     display: flex;
     justify-content: center;
@@ -54,7 +54,6 @@
     height: 100%;
     width: 100%;
     transition:.25s;
-    background: var(--bg);
   }
 
   ul li a.highlight {
@@ -66,7 +65,7 @@
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: var(--bg);
     width: 100%;
-    height: 100%;
+    height: 140%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,15 +79,15 @@
     align-items: center;
   }
 
-  ul li::after {
+  ul li a::after {
     content: '';
     position: absolute;
     width: 110%;
     height: 110%;
     background-image: url('/images/christmas-polygon.png');
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
-
+    pointer-events: none;
   }
 
   /* ul li a:hover{

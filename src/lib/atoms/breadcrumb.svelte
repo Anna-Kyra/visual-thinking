@@ -30,7 +30,8 @@
     height: 200%;
     /* background-color: aqua; */
     background-image: url('/images/christmas-border.png');
-    background-size: contain;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
   }
   /* MOBILE - STYLING */
   a, span {
