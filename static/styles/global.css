@@ -52,12 +52,14 @@
      Word vaak gebruikt voor backgrounds en borders. 
     */
   /* --vtGrey: #cecece; */
-  --vtGrey: #ccbfb2;
+  --vtGrey:hsl(30, 20.30%, 74.90%);
   --vtGrey-80: #c0beb9;
   /* --vtGrey-50: #e0dedc; */
-  --vtGrey-50: #ccbfb2;
-  --vtGrey-10: #f9f8f8;
-  --vtGrey-5: #f9f9f9;
+  --vtGrey-50:hsl(30, 20.30%, 74.90%);
+  /* --vtGrey-10: #f9f8f8; */
+  --vtGrey-10: #hsl(30, 43%, 78%);
+  /* --vtGrey-5:#f9f9f9; */
+  --vtGrey-5: hsl(30, 43%, 87%);
 
   /* Visual Thinking: Secondary colors,
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
@@ -100,7 +102,7 @@ body {
   font-family: var(--vtSecondaryFont);
   cursor: url('/images/victorian_cursor.png'), auto !important;
 
-  background-color: #ffefdf;
+  background-color:hsl(30, 100.00%, 93.70%);
 }
 
 /* MARK: Victorian cursor */
