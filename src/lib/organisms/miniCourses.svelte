@@ -45,6 +45,21 @@
   ul li {
     width: var(--size);
     height: calc(var(--size) * 1.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-image: url('/images/christmas-polygon.png');
+    background-size: cover;
+    background-position: center;
+
   }
 
   ul li a {
@@ -58,6 +73,7 @@
     font-size: 1.25em;
     font-weight: bold;
     height: 100%;
+    width: 100%;
     font-family: var(--vtPrimaryFont);
     transition:.25s;
   }

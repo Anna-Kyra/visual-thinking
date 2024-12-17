@@ -15,6 +15,22 @@
   div {
     background-color: var(--bgc);
     margin:0 -1rem;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    position: relative;
+
+  }
+
+  div::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 200%;
+    /* background-color: aqua; */
+    background-image: url('/images/christmas-border.png');
+    background-size: contain;
   }
   /* MOBILE - STYLING */
   a, span {
@@ -26,7 +42,7 @@
     padding-bottom: 0.2rem;
     padding-left: 1rem;
     margin-top: 0%;
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     text-decoration:none;

@@ -43,14 +43,18 @@
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: var(--bg);
     /*   aspect-ratio: 1 / 1; */
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: inherit;
     padding: 2rem 0;
     text-align: center;
     font-size: 1.25em;
     height: 100%;
+    width: 100%;
     transition:.25s;
+    background: var(--bg);
   }
 
   ul li a.highlight {
@@ -58,7 +62,33 @@
   }
 
   ul li a span {
-    place-self: center;
+    /* place-self: center; */
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: var(--bg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li {
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-image: url('/images/christmas-polygon.png');
+    background-size: cover;
+    background-position: center;
+
   }
 
   /* ul li a:hover{
@@ -304,7 +334,7 @@
 
   @media (width > 68em) {
     ul {
-      --gap: 1.3rem;
+      --gap: 1.6rem;
       --size: 13em;
       --tx: 0.55;
       --ch: 0.71;
