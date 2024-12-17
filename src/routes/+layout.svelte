@@ -8,14 +8,16 @@
     let timeoutId
     let isInactive = false
     let opacityFreeze = 0
-    let sound = new Audio("/video/ice-crack.mp3");
+    let sound
 
     function toggleOverlay(inactive) {
         isInactive = inactive;
         if (inactive) {
             console.log('freeze')
             opacityFreeze = 100
-            sound.play();
+            sound.play()
+            // console.log(sound)
+
         } else {
             console.log('unfreeze')
             opacityFreeze = 0
@@ -29,20 +31,21 @@
         }
 
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => toggleOverlay(true), 10000)
+        timeoutId = setTimeout(() => toggleOverlay(true), 3000)
     }
 
     onMount(() => {
+        sound = new Audio("/video/ice-crack.mp3")
+        // console.log(sound)
         window.addEventListener("mousemove", resetTimer)
-
         resetTimer()
-
+        
         return () => {
             window.removeEventListener("mousemove", resetTimer);
             clearTimeout(timeoutId);
         }
+       
     })
-
     
     
 </script>
