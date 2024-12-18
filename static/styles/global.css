@@ -72,6 +72,12 @@
   box-sizing: border-box;
 }
 
+@property --c {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: red;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -220,3 +226,4 @@ svg.icon path.background {
     max-width: 12rem;
   }
 }
+

@@ -1,8 +1,28 @@
 <script>
+  import { onMount } from 'svelte';
   import { page } from "$app/stores";
 
   let activeRoute;
   $: activeRoute = $page.route.id;
+
+  onMount(() => {
+        // console.log('js werkt')
+        let wrapper = document.querySelector('.wrapper')
+        let buttonThemeSwitcher = document.querySelector('.themeSwitcher')
+
+        buttonThemeSwitcher.addEventListener('click', themeSwitcher)
+
+        function themeSwitcher() {
+            console.log('werkt')
+            wrapper.classList.toggle('liquid-acid-theme')
+
+            if(this.innerHTML === "red pill") {
+                this.innerHTML = "blue pill"; // als er Frontend staat veranderd de innerHTML in Groen
+            } else {
+                this.innerHTML = "red pill"; // als er geen Frontend staat veranderd de innerHTML in Groen
+            }
+        }
+    });
 </script>
 
 <header>
@@ -18,10 +38,15 @@
       <li><a href="/tekenruimte" class:active={activeRoute == "/tekenruimte"}>Tekenruimte</a></li>
     </ul>
   </nav>
+  <button class="themeSwitcher">red pill</button>
 </header>
 
 
 <style>
+  header {
+    background-color: white;
+    z-index: 999;
+  }
   a {
     --background:var(--vtYellow);
     color: var(--vtDarkBlue);
@@ -137,6 +162,14 @@
   ul li:nth-child(6) a:focus-visible,
   ul li:nth-child(6) a.active {
     --state-color: var(--vtGrey);
+  }
+
+  /* THEME SWITCHING */
+  button.themeSwitcher {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    z-index:1;
   }
 
   @media (min-width: 80em) {
