@@ -35,7 +35,7 @@
         }
 
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => toggleOverlay(true), 3000)
+        timeoutId = setTimeout(() => toggleOverlay(true), 10000)
     }
 
     onMount(() => {
@@ -56,7 +56,7 @@
     
 </script>
 
-<div bind:this={wrapper} class="wrapper">
+<div bind:this={wrapper} class="wrapper brrr">
     <Header />
 
     <main><slot /></main>
@@ -67,6 +67,7 @@
 <div bind:this={box} class="icy-overlay" style="--opacity-freeze: {opacityFreeze};"></div>
 
 <style>
+
     .icy-overlay {
         position: fixed;
         top: 0;
@@ -84,9 +85,9 @@
 
     }
 
-    /* .wrapper {
+    .brrr {
         animation: brrr 300ms linear;
-    } */
+    }
 
     @keyframes brrr {
         0% {
