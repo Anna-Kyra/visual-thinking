@@ -9,14 +9,15 @@
     let timeoutId
     let isInactive = false
     let opacityFreeze = 0
-    let sound
+    let soundIce
+    let soundBrrr
 
     function toggleOverlay(inactive) {
         isInactive = inactive;
         if (inactive) {
             console.log('freeze')
             opacityFreeze = 100
-            sound.play()
+            soundIce.play()
             // console.log(sound)
             wrapper.classList.remove('brrr')
 
@@ -24,6 +25,7 @@
             console.log('unfreeze')
             opacityFreeze = 0
             wrapper.classList.add('brrr')
+            soundBrrr.play()
         }
     }
 
@@ -33,18 +35,21 @@
         }
 
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => toggleOverlay(true), 10000)
+        timeoutId = setTimeout(() => toggleOverlay(true), 3000)
     }
 
     onMount(() => {
-        sound = new Audio("/video/ice-crack.mp3")
+        soundIce = new Audio("/video/ice-crack.mp3")
+        soundBrrr = new Audio("/video/brr-sound.mp3")
         // console.log(sound)
         window.addEventListener("mousemove", resetTimer)
+        window.addEventListener("scroll", resetTimer)
         resetTimer()
         
         return () => {
-            window.removeEventListener("mousemove", resetTimer);
-            clearTimeout(timeoutId);
+            window.removeEventListener("mousemove", resetTimer)
+            window.removeEventListener("scroll", resetTimer)
+            clearTimeout(timeoutId)
         }
     })
     
@@ -58,7 +63,6 @@
     
     <Footer />
 </div>
-
 
 <div bind:this={box} class="icy-overlay" style="--opacity-freeze: {opacityFreeze};"></div>
 
