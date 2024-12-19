@@ -5,6 +5,7 @@
     import { onMount } from "svelte";
 
     let box // .icy-overlay
+    let wrapper
     let timeoutId
     let isInactive = false
     let opacityFreeze = 0
@@ -17,11 +18,12 @@
             opacityFreeze = 100
             sound.play()
             // console.log(sound)
+            wrapper.classList.remove('brrr')
 
         } else {
             console.log('unfreeze')
             opacityFreeze = 0
-            
+            wrapper.classList.add('brrr')
         }
     }
 
@@ -31,7 +33,7 @@
         }
 
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => toggleOverlay(true), 3000)
+        timeoutId = setTimeout(() => toggleOverlay(true), 10000)
     }
 
     onMount(() => {
@@ -44,19 +46,21 @@
             window.removeEventListener("mousemove", resetTimer);
             clearTimeout(timeoutId);
         }
-       
     })
     
     
 </script>
 
-<Header />
+<div bind:this={wrapper} class="wrapper">
+    <Header />
 
-<main><slot /></main>
+    <main><slot /></main>
+    
+    <Footer />
+</div>
 
-<Footer />
 
-<div bind:this={box} class="icy-overlay" style="--opacity-freeze: {opacityFreeze}"></div>
+<div bind:this={box} class="icy-overlay" style="--opacity-freeze: {opacityFreeze};"></div>
 
 <style>
     .icy-overlay {
@@ -74,6 +78,28 @@
         pointer-events: none;
         transition: opacity 5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
+    }
+
+    /* .wrapper {
+        animation: brrr 300ms linear;
+    } */
+
+    @keyframes brrr {
+        0% {
+            transform: translate(0, 0);
+        }
+        20% {
+            transform: translate(-20px);
+        }
+        50% {
+            transform: translate(20px);
+        }
+        80% {
+            transform: translate(-20px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
     }
 
 </style>
