@@ -22,6 +22,9 @@
 
 
 <style>
+   
+
+
   a {
     --background:var(--vtYellow);
     color: var(--vtDarkBlue);
@@ -29,9 +32,11 @@
     cursor: pointer;
     font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
     padding:.25rem;
+    
   }
 
   a.logo {
+    all: unset;
     --background:var(--vtDarkBlue);
     padding:1rem .25rem 0;
     margin-top:-.75rem;
@@ -140,6 +145,62 @@
   }
 
   @media (min-width: 80em) {
+    /* MARK: Ribbon */
+  li {
+    position: relative;
+
+  }
+
+ 
+  li::before,
+  li::after {
+    content: 'hi';
+    position: absolute;
+    left: -30px;
+    top: -8px;
+    background-image: url('/images/ribbon-between.svg');
+    background-size: 100% auto;
+    height: 200px;
+    width: 32.6px;
+  }
+
+  li::after {
+    left: unset;
+    right: -30px;
+    transform: scaleX(-1);
+  }
+
+
+
+  li:nth-of-type(1):before,
+  li:nth-of-type(4):before,
+  li:nth-of-type(3):after, 
+  li:nth-of-type(6)::after{
+    content: 'hi';
+    position: absolute;
+    left: -47px;
+    top: -8px;
+    background-image: url('/images/ribbon-end.svg');
+    background-size: 100% auto;
+    height: 200px;
+    width: 50px;
+  }
+
+  
+
+  li:nth-of-type(3)::after, li:nth-of-type(6)::after {
+    left: unset;
+    right: -47px;
+    transform: scaleX(-1);
+  }
+
+  a {
+    background-color: var(--vtGrey-10);
+    box-shadow:inset 0px 0px 0px 2px var(--vtDarkBlue);
+    border-left: 0;
+    border-right: 0;
+  }
+
     a.logo {
       position: absolute;
       z-index:1;
