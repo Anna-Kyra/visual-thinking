@@ -64,9 +64,28 @@
     <Footer />
 </div>
 
+<!-- <div class="icicles icicles01"></div> -->
+
 <div bind:this={box} class="icy-overlay" style="--opacity-freeze: {opacityFreeze};"></div>
 
 <style>
+
+    .wrapper::before, .wrapper::after {
+        content: "";
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        /* background-color: aqua; */
+        background-image: url('/images/icicles01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .wrapper::after {
+        right: 0;
+        transform: scaleX(-1);
+    }
 
     .icy-overlay {
         position: fixed;
