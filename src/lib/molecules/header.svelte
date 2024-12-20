@@ -93,7 +93,7 @@
     padding:1em;
     margin: 0 1rem 0 1rem;
     align-items: center;
-    gap:4vw;
+    gap:3em;
     overflow-x:auto;
     width:100%;
   }
