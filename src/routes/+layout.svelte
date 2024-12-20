@@ -64,11 +64,25 @@
     <Footer />
 </div>
 
-<!-- <div class="icicles icicles01"></div> -->
+<div class="paper-texture"></div>
 
 <div bind:this={box} class="icy-overlay" style="--opacity-freeze: {opacityFreeze};"></div>
 
 <style>
+
+    @supports (mix-blend-mode: multiply) {
+        .paper-texture {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/paper-texture.jpg');
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            opacity: 80%;
+        }
+    }
+    
 
     .wrapper::before, .wrapper::after {
         content: "";
