@@ -57,6 +57,7 @@
     text-decoration: none;
     color: black;
     margin-bottom: 5px;
+    background-color: white;
   }
 
   article {
